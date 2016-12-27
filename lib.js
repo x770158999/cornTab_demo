@@ -241,26 +241,26 @@ function create(options, client) {
 }
 module.exports =CornTab;
 ////////////////////////////////////////////////////////////////
-let t = moment().format();
-let ex = moment().add(2, 's').format();
-let opt = {
-    createTime: t,
-    execTime: ex,
-    url: 'mongodb://localhost:27017/questdb3',
-    field: 'collection|squarequestion;selector|__id:582c1cf2b80812a176ff035a;body|{"state":1}',
-    type: 'mongodb_updateOne'
-};
-let opt1 = {
-    createTime: t,
-    execTime: ex,
-    url: 'https://www.opt.com.cn/test',
-    field: 'body|{"questId":"5849192456a272c155a6bcdd"}',
-    type: 'request_post'
-};
-let a = new CornTab();
-const client = a.createRedis();
-let b = a.create(opt, client);
-a.subscribeClient({host: 'localhost'});
-let c=a.fieldParse('collection|squarequestion;selector|__id:582c1cf2b80812a176ff035a;body|{"state":1}');
-console.log(typeof c.selector._id);
-console.log(c.body);
+// let t = moment().format();
+// let ex = moment().add(2, 's').format();
+// let opt = {
+//     createTime: t,
+//     execTime: ex,
+//     url: 'mongodb://localhost:27017/questdb3',
+//     field: 'collection|squarequestion;selector|__id:582c1cf2b80812a176ff035a;body|{"state":1}',
+//     type: 'mongodb_updateOne'
+// };
+// let opt1 = {
+//     createTime: t,
+//     execTime: ex,
+//     url: 'https://www.opt.com.cn/test',
+//     field: 'body|{"questId":"5849192456a272c155a6bcdd"}',
+//     type: 'request_post'
+// };
+// let a = new CornTab();
+// const client = a.createRedis();
+// let b = a.create(opt, client);
+// a.subscribeClient({host: 'localhost'});
+// let c=a.fieldParse('collection|squarequestion;selector|__id:582c1cf2b80812a176ff035a;body|{"state":1}');
+// console.log(typeof c.selector._id);
+// console.log(c.body);
